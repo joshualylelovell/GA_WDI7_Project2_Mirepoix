@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container-fluid">
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div>
+      <h3>Recipes:</h3>
+      <% recipes.forEach(function(recipe) { %>
+        <h4>
+          <form method="POST" action="/recipes/<%= recipe._id %>?_method=DELETE">
+            <a href="/recipes/<%= recipe._id %>">
+              <%= recipe.title %>
+            </a>
+            <button type="submit" class="btn btn-xs btn-danger">Delete</button>
+          </form>
+        </h4>
+      <% }) %>
+    </div>
+    <a href="/recipes/new" class="btn btn-primary">New</a>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+</body>
+
+<script type="text/javascript" src="/javascripts/jquery.min.js" defer></script>
+<script type="text/javascript" src="/javascripts/bootstrap.min.js" defer></script>
+
+</html>

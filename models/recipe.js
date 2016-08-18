@@ -4,7 +4,7 @@ var RecipeSchema = new mongoose.Schema({
   title:         { type: String,  required: true },
   description:   String,
   website:       String,
-  ingredients:   { type: String, required: true}
+  ingredients:   { type: String, required: true},
   directions:    String,
   notes:         String,
   rating:        Number
@@ -20,11 +20,11 @@ function date2String(date) {
   return date.toLocaleDateString('en-US', options);
 }
 
-TodoSchema.methods.getCreatedAt = function() {
+RecipeSchema.methods.getCreatedAt = function() {
   return date2String(this.createdAt);
 };
 
-TodoSchema.methods.getUpdatedAt = function() {
+RecipeSchema.methods.getUpdatedAt = function() {
   return date2String(this.updatedAt);
 };
 

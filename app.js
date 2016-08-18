@@ -7,11 +7,16 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
 var flash = require('connect-flash');
+var mongoose = require('mongoose');
+var methodOverride = require('method-override');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var homeRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var recipesRouter = require('./routes/recipes');
 
 var app = express();
+
+mongoose.connect('mongodb://localhost/recipes');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,6 +37,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+app.use(methodOverride('_method'));
+
 require('./config/passport/passport')(passport);
 
 // This middleware will allow us to use the currentUser in our views and routes.
@@ -40,8 +47,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use('/', routes);
-app.use('/users', users);
+app.use('/', homeRouter);
+app.use('/users', usersRouter);
+app.use('/recipes', recipesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

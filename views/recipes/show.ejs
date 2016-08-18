@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container-fluid">
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div>
+      <h3>SHOW</h3>
+      <p><b>Title: </b><%= recipe.title %></p>
+      <p><b>Description: </b><%= recipe.description %></p>
+      <p><b>Website: </b><%= recipe.website %></p>
+      <p><b>Ingredients: </b><%= recipe.ingredients %></p>
+      <p><b>Directions: </b><%= recipe.directions %></p>
+      <p><b>Notes: </b><%= recipe.notes %></p>
+      <p><b>Rating: </b><%= recipe.rating %></p>
+
+      <p><b>Created: </b><%= recipe.getCreatedAt() %></p>
+      <p><b>Last Updated: </b><%= recipe.getUpdatedAt() %></p>
+    </div>
+
+    <a href="/recipes" class="btn btn-primary">Back</a>
+    <a href="/recipes/<%= recipe._id %>/edit" class="btn btn-danger">Edit</a>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>

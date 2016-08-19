@@ -4,6 +4,10 @@ body {
   background-color: #F8F8FF;
 }
 
+.container-fluid {
+  font-family: 'Permanent Marker', cursive;
+}
+
 .navbar {
   background-color: #1abc9c;
 }
@@ -34,5 +38,12 @@ body {
 
 .footer-p {
   color: #1abc9c;
+}
+
+.row > img {
+  border: none;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 

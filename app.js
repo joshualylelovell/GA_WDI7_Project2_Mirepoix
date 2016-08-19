@@ -37,6 +37,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+app.use(express.static('public'));
+
 app.use(methodOverride('_method'));
 
 require('./config/passport/passport')(passport);

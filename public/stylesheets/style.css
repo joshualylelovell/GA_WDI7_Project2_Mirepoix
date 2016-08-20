@@ -40,10 +40,10 @@ body {
   color: #1abc9c;
 }
 
-.row > img {
-  border: none;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+.btn {
+  color: white;
+  margin: 10px;
+  background: #1abc9c;
+  border-color: #1abc9c;
 }
 

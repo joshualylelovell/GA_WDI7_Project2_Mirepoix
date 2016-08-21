@@ -5,7 +5,7 @@ body {
 }
 
 .container-fluid {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Handlee', cursive;
 }
 
 .navbar {
@@ -51,5 +51,17 @@ body {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+.titles {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h3 {
+  margin: 1em 0;
+}
+
+#google {
+  margin: 1em 0;
 }
 

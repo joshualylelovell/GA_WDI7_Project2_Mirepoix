@@ -1,3 +1,30 @@
+var ingredientString = recipe.ingredients
+
+function splitString(stringToSplit, separator) {
+  var arrayOfStrings = stringToSplit.split(separator);
+  return arrayOfStrings;
+}
+
+var comma = ',';
+
+var newArray = splitString(ingredientString, comma);
+
+function writeIngredients(){
+    var items = document.getElementById("itemList");
+
+    for (var i = 0; i < newArray.length; i++ ) {
+        var item = document.createElement("li");
+        item.innerHTML = newArray[i];
+        items.appendChild(item);
+    }
+}
+
+writeIngredients();
+
+//var ingredientString = '3 eggs, dash of milk, salt and pepper to taste, butter for pan';
+
+/*
+
 function splitString(stringToSplit, separator) {
   var arrayOfStrings = stringToSplit.split(separator);
 
@@ -48,4 +75,4 @@ function writeIngredients(){
 
  }
 
- writeIngredients();
+ writeIngredients(); */

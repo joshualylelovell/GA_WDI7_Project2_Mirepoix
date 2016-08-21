@@ -25,9 +25,9 @@
     </div>
     <a href="/recipes/new" class="btn btn-primary">New</a>
 
-    <form id="google" method="get" target="_blank" action="https://www.google.com/search">
-      <input type="text" name="q" size="31" onfocus="if(this.value == 'need inspiration?') { this.value = ''; }" value="Need inspiration?" >
-      <input type="submit" value="Submit">
+    <form class="form-inline" id="google" method="get" target="_blank" action="https://www.google.com/search">
+      <input type="text" name="q" class="form-control"  aria-describedby="googleSearch" placeholder="Need inspiration?">
+      <button type="submit" value="Submit" class="btn btn-primary">Google search</button>
     </form>
 
   </main>

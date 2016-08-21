@@ -14,13 +14,14 @@
     <form class="recipe-form" action="/recipes" method="post">
       <% include _form %>
       <a href="/recipes" class="btn btn-primary">Back</a>
-      <button type="submit" class="btn btn-success">Save</button>
+      <button type="submit" class="btn btn-primary">Save</button>
     </form>
 
-    <form id="google" method="get" target="_blank" action="https://www.google.com/search">
-      <input type="text" name="q" size="31" onfocus="if(this.value == 'need inspiration?') { this.value = ''; }" value="Need inspiration?" >
-      <input type="submit" value="Submit">
+    <form class="form-inline" id="google" method="get" target="_blank" action="https://www.google.com/search">
+      <input type="text" name="q" class="form-control"  aria-describedby="googleSearch" placeholder="Need inspiration?">
+      <button type="submit" value="Submit" class="btn btn-primary">Google search</button>
     </form>
+
   </main>
 
   <footer>

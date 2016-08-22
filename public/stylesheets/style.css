@@ -10,6 +10,7 @@ body {
 
 .container-fluid {
   font-family: 'Handlee', cursive;
+  margin: 0 2%;
 }
 
 .navbar {
@@ -87,4 +88,17 @@ main {
 #recipeTitles {
   color: black;
 }
+
+li {
+  padding: .25em;
+}
+
+.showPage {
+  font-size: 1.25em;
+}
+
+#directionList {
+  margin-right: 5%;
+}
+
 

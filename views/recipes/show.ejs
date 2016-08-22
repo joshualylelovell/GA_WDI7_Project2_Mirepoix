@@ -12,9 +12,9 @@
   <main>
     <div>
       <h3> <span class="titles"> <%= recipe.title %> </span> </h3>
-      <p> <span class="titles"> DESCRIPTION:</span> <%= recipe.description %></p>
-      <p> <span class="titles"> WEDBSITE:</span> <%= recipe.website %></p>
-      <p> <span class="titles"> INGREDIENTS:</span> </p>
+      <p class="showPage"> <span class="titles"> DESCRIPTION:</span> <%= recipe.description %></p>
+      <p class="showPage"> <span class="titles"> WEDBSITE:</span> <%= recipe.website %></p>
+      <p class="showPage"> <span class="titles"> INGREDIENTS:</span> </p>
         <ul id="ingredientList">
 
         <% var ingredientString = recipe.ingredients %>
@@ -24,42 +24,42 @@
         <%   return arrayOfStrings; %>
         <% } %>
 
-        <% var comma = ','; %>
+        <% var comma = '--'; %>
 
         <% var newArray = splitString(ingredientString, comma); %>
 
 
           <% for(var i=0; i<newArray.length; i++) {%>
-            <li> <%= newArray[i] %> </li>
+            <li class="showPage"> <%= newArray[i] %> </li>
           <% } %>
 
         </ul>
 
-      <p> <span class="titles"> DIRECTIONS:</span></p>
+      <p class="showPage"> <span class="titles"> DIRECTIONS:</span> </p>
 
-      <ul id="directionList">
+        <ul id="directionList">
 
-      <% var directionString = recipe.directions %>
+            <% var directionString = recipe.directions %>
 
-      <% function splitString(stringToSplit, separator) { %>
-      <%   var arrayOfStrings = stringToSplit.split(separator); %>
-      <%   return arrayOfStrings; %>
-      <% } %>
+            <% function splitString(stringToSplit, separator) { %>
+            <%   var arrayOfStrings = stringToSplit.split(separator); %>
+            <%   return arrayOfStrings; %>
+            <% } %>
 
-      <% var comma = ','; %>
+            <% var comma = '--'; %>
 
-      <% var newArray = splitString(directionString, comma); %>
-
-
-        <% for(var i=0; i<newArray.length; i++) {%>
-          <li> <%= newArray[i] %> </li>
-        <% } %>
-
-      </ul>
+            <% var newArray = splitString(directionString, comma); %>
 
 
-      <p> <span class="titles"> NOTES:</span> <%= recipe.notes %></p>
-      <p> <span class="titles"> RATING:</span> <%= recipe.rating %></p>
+              <% for(var i=0; i<newArray.length; i++) {%>
+                <li class="showPage"> <%= newArray[i] %> </li>
+              <% } %>
+
+       </ul>
+
+
+      <p class="showPage"> <span class="titles"> NOTES:</span> <%= recipe.notes %></p>
+      <p class="showPage"> <span class="titles"> RATING:</span> <%= recipe.rating %></p>
 
       <p> <b>Created:</b> <%= recipe.getCreatedAt() %></p>
       <p> <b>Last Updated:</b> <%= recipe.getUpdatedAt() %></p>

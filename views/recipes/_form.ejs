@@ -31,23 +31,25 @@
 <div class="form-group row">
   <label for="ingredients" class="col-sm-12 col-form-label">Ingredients:</label>
   <div class="col-sm-6 col-form-label">
-  <input type="text"
+  <textarea
          class="form-control"
          name="ingredients"
-         value="<%= recipe.ingredients %>">
+         rows="5"
+         value="<%= recipe.ingredients %>"></textarea>
   </div>
-  <small class="form-text text-muted col-sm-12">Separate ingredients with a comma for proper display</small>
+  <small class="form-text col-sm-12">Separate ingredients with " -- " for proper display</small>
 </div>
 
 <div class="form-group row">
   <label for="directions" class="col-sm-12 col-form-label">Directions:</label>
   <div class="col-sm-6 col-form-label">
-  <input type="text"
+  <textarea
          class="form-control"
          name="directions"
-         value="<%= recipe.directions %>">
+         rows="7"
+         value="<%= recipe.directions %>"></textarea>
   </div>
-  <small class="form-text text-muted col-sm-12">Separate directions with a comma for proper display</small>
+  <small class="form-text text-bold col-sm-12">Separate directions with " -- " for proper display</small>
 </div>
 
 <div class="form-group row">

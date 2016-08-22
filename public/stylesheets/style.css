@@ -38,6 +38,17 @@ body {
 
 .footer-p {
   color: #1abc9c;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+#footer-main {
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
 }
 
 .btn {
@@ -45,12 +56,6 @@ body {
   margin: 10px;
   background: #1abc9c;
   border-color: #1abc9c;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
 }
 
 .titles {
@@ -63,5 +68,15 @@ h3 {
 
 #google {
   margin: 1em 0;
+}
+
+main {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.container {
+  margin-bottom: 0;
+  padding-bottom: 0
 }
 

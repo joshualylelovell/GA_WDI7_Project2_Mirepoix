@@ -1,7 +1,11 @@
 body {
   padding: 50px;
   font-family: 'Waiting for the Sunrise', cursive;
-  background-color: #F8F8FF;
+  background-color: #5C97BF;
+}
+
+#homepage {
+  background-color: #6589AA;
 }
 
 .container-fluid {
@@ -78,5 +82,9 @@ main {
 .container {
   margin-bottom: 0;
   padding-bottom: 0
+}
+
+#recipeTitles {
+  color: black;
 }
 

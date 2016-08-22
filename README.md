@@ -5,7 +5,7 @@
 
 <b>GA WDI7 Project 2</b>
 
-<b>Mirepoix</b>b> (a roughly chopped vegetable mixture of onions, carrots, and celery that is used as a starter
+<b>Mirepoix</b> (a roughly chopped vegetable mixture of onions, carrots, and celery that is used as a starter
 for many recipes) is a MEN stack app utilizing user authentication and authorization, performing CRUD operations
 while following RESTful best-practices for routing.
 
@@ -24,12 +24,13 @@ while following RESTful best-practices for routing.
  * Passport
  * Bootstrap
 
- ### User stories that still need to be brought to life in v2.0:
 
-   * User will be able to see and search a global database of recipes.
-   * User will be able to add their recipes to a global list.
-   * User will be able to upload a picture of their recipe.
-   * User will be able to search their list of recipes.
+### User stories that still need to be brought to life in v2.0:
+
+ * User will be able to see and search a global database of recipes.
+ * User will be able to add their recipes to a global list.
+ * User will be able to upload a picture of their recipe.
+ * User will be able to search their list of recipes.
 
 ###Wireframes:
 

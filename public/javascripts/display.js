@@ -9,8 +9,8 @@ var comma = ',';
 
 var newArray = splitString(ingredientString, comma);
 
-function writeIngredients(){
-    var items = document.getElementById("itemList");
+/* function writeIngredients(){
+    var items = document.getElementById("ingredientList");
 
     for (var i = 0; i < newArray.length; i++ ) {
         var item = document.createElement("li");
@@ -19,7 +19,7 @@ function writeIngredients(){
     }
 }
 
-writeIngredients();
+writeIngredients(); */
 
 //var ingredientString = '3 eggs, dash of milk, salt and pepper to taste, butter for pan';
 

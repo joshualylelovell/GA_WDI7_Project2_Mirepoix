@@ -1,10 +1,7 @@
 <nav class="navbar navbar-dark" role="navigation">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand link-color" target="_blank" href="https://en.wikipedia.org/wiki/Mirepoix_(cuisine)"> Mirepoix </a>
-    </div>
-
     <ul class="nav navbar-nav navbar-left">
+      <li><a class="link-color" target="_blank" href="https://en.wikipedia.org/wiki/Mirepoix_(cuisine)"> Mirepoix </a></li>
       <li><a class="link-color" href="/">Home</a></li>
       <% if (currentUser) { %>
         <li><a class="link-color" href="/recipes">Recipes</a></li>
@@ -21,6 +18,13 @@
     </ul>
   </div>
 </nav>
+
+<section class="wide">
+        <div class="col-xs-5 line"><hr></div>
+        <div class="col-xs-2 logo">Mirepoix</div>
+        <div class="col-xs-5 line"><hr></div>
+        .
+</section>
 
 <div class="flash">
   <% if (typeof message !== 'undefined') { %>

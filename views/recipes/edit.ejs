@@ -13,7 +13,7 @@
     <h3>EDIT</h3>
 
     <form class="recipe-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="post">
-      <% include _form %>
+      <% include _editform %>
       <a href="/recipes/<%= recipe._id %>" class="btn btn-primary">Back</a>
       <button type="submit" class="btn btn-success">Save</button>
     </form>

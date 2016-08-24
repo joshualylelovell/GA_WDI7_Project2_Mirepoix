@@ -7,7 +7,8 @@ var RecipeSchema = new mongoose.Schema({
   ingredients:   { type: String, required: true},
   directions:    String,
   notes:         String,
-  rating:        Number
+  rating:        Number,
+  img:           String
   },
   { timestamps: true }  // createdAt, updatedAt
 );

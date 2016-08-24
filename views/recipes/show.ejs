@@ -12,28 +12,37 @@
   <main>
     <div>
       <h3> <span class="titles"> <%= recipe.title %> </span> </h3>
-      <p class="showPage"> <span class="titles"> DESCRIPTION:</span> <%= recipe.description %></p>
-      <p class="showPage"> <span class="titles"> WEDBSITE:</span> <%= recipe.website %></p>
+      <p class="showPage"> <span class="titles"> DESCRIPTION: </span> <%= recipe.description %></p>
+      <p class="showPage"> <span class="titles"> WEDBSITE: </span> <%= recipe.website %></p>
       <p class="showPage"> <span class="titles"> INGREDIENTS:</span> </p>
-        <ul id="ingredientList">
+      <div class="row">
+        <span class="col-xs-12 col-sm-6 col-md-6">
 
-        <% var ingredientString = recipe.ingredients %>
+          <ul id="ingredientList">
 
-        <% function splitString(stringToSplit, separator) { %>
-        <%   var arrayOfStrings = stringToSplit.split(separator); %>
-        <%   return arrayOfStrings; %>
-        <% } %>
+            <% var ingredientString = recipe.ingredients %>
 
-        <% var comma = '--'; %>
+              <% function splitString(stringToSplit, separator) { %>
+              <%   var arrayOfStrings = stringToSplit.split(separator); %>
+              <%   return arrayOfStrings; %>
+              <% } %>
 
-        <% var newArray = splitString(ingredientString, comma); %>
+              <% var comma = '--'; %>
+
+              <% var newArray = splitString(ingredientString, comma); %>
 
 
-          <% for(var i=0; i<newArray.length; i++) {%>
-            <li class="showPage"> <%= newArray[i] %> </li>
-          <% } %>
+              <% for(var i=0; i<newArray.length; i++) {%>
+              <li class="showPage"> <%= newArray[i] %> </li>
+              <% } %>
 
-        </ul>
+          </ul>
+          </span>
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <img class="bottom-row img-rounded recipeImage" src="<%= recipe.image ? recipe.image : '' %>">
+        </div>
+      </div>
 
       <p class="showPage"> <span class="titles"> DIRECTIONS:</span> </p>
 
@@ -58,14 +67,8 @@
        </ul>
 
 
-      <p class="showPage"> <span class="titles"> NOTES:</span> <%= recipe.notes %></p>
-      <p class="showPage"> <span class="titles"> RATING:</span> <%= recipe.rating %></p>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 thumbnail">
-          <img class="bottom-row" src="<%= recipe.image %>">
-        </div>
-      </div>
+      <p class="showPage"> <span class="titles"> NOTES: </span> <%= recipe.notes %></p>
+      <p class="showPage"> <span class="titles"> RATING: </span> <%= recipe.rating %></p>
 
       <p> <b>Created:</b> <%= recipe.getCreatedAt() %></p>
       <p> <b>Last Updated:</b> <%= recipe.getUpdatedAt() %></p>

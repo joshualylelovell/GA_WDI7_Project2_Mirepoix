@@ -101,6 +101,13 @@ main {
   color: black;
 }
 
+.recipeImage {
+  max-width: 500px;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+}
+
 li {
   padding: .25em;
 }

@@ -12,9 +12,9 @@
   <main>
     <div>
       <h3> <span class="titles"> <%= recipe.title %> </span> </h3>
-      <p class="showPage"> <span class="titles"> DESCRIPTION: </span> <%= recipe.description %></p>
-      <p class="showPage"> <span class="titles"> WEBSITE: </span> <%= recipe.website %></p>
-      <p class="showPage"> <span class="titles"> INGREDIENTS:</span> </p>
+      <p class="showPage"> <span class="titles"> DESCRIPTION: </span> <%= recipe.description %> </p>
+      <p class="showPage"> <span class="titles"> WEBSITE: </span> <%= recipe.website %> </p>
+      <p class="showPage"> <span class="titles"> INGREDIENTS: </span> </p>
       <div class="row">
         <span class="col-xs-12 col-sm-6 col-md-6">
 
@@ -66,8 +66,7 @@
 
        </ul>
 
-      <% var notes = <p class="showPage"> <span class="titles"> NOTES:</span></p> %>
-      <%= typeof recipe.notes!='undefined' ? this.notes : '' %>  <p class="showPage"> <%= recipe.notes %></p>
+      <p class="showPage"> <span class="titles"> NOTES: </span> <%= recipe.notes %></p>
       <p class="showPage"> <span class="titles"> RATING: </span> <%= recipe.rating %></p>
 
       <p> <b>Created:</b> <%= recipe.getCreatedAt() %></p>

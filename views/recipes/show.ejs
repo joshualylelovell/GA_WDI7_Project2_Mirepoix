@@ -61,6 +61,12 @@
       <p class="showPage"> <span class="titles"> NOTES:</span> <%= recipe.notes %></p>
       <p class="showPage"> <span class="titles"> RATING:</span> <%= recipe.rating %></p>
 
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 thumbnail">
+          <img class="bottom-row" src="<%= recipe.image %>">
+        </div>
+      </div>
+
       <p> <b>Created:</b> <%= recipe.getCreatedAt() %></p>
       <p> <b>Last Updated:</b> <%= recipe.getUpdatedAt() %></p>
     </div>

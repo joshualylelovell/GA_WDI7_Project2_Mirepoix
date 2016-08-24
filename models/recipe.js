@@ -8,7 +8,7 @@ var RecipeSchema = new mongoose.Schema({
   directions:    String,
   notes:         String,
   rating:        Number,
-  img:           String
+  image:         String
   },
   { timestamps: true }  // createdAt, updatedAt
 );

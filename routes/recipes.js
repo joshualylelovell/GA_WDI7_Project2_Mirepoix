@@ -33,7 +33,8 @@ router.get('/new', authenticate, function(req, res, next) {
     ingredients:   '',
     directions:    '',
     notes:         '',
-    rating:        ''
+    rating:        '',
+    image:         ''
   };
   res.render('recipes/new', { recipe: recipe, message: req.flash() });
 });
@@ -54,7 +55,8 @@ router.post('/', authenticate, function(req, res, next) {
     ingredients: req.body.ingredients,
     directions: req.body.directions,
     notes: req.body.notes,
-    rating: req.body.rating
+    rating: req.body.rating,
+    image: req.body.image
   };
   currentUser.recipes.push(recipe);
   currentUser.save()
@@ -84,6 +86,7 @@ router.put('/:id', authenticate, function(req, res, next) {
     recipe.directions = req.body.directions;
     recipe.notes = req.body.notes;
     recipe.rating = req.body.rating;
+    recipe.image = req.body.image;
     currentUser.save()
     .then(function(saved) {
       res.redirect('/recipes');

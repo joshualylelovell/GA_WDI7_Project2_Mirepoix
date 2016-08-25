@@ -29,7 +29,7 @@ while following RESTful best-practices for routing.
 
  * User will be able to see and search a global database of recipes.
  * User will be able to add their recipes to a global list.
- * User will be able to upload a picture of their recipe.
+ * User will be able to upload a picture file of their recipe rather than linking to a URL.
  * User will be able to search their list of recipes.
 
 ###Wireframes:

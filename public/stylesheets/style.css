@@ -75,6 +75,10 @@ footer {
   border-color: #1abc9c;
 }
 
+.left-wall.btn-primary {
+  margin: 10px 10px 10px 0px;
+}
+
 .titles {
   font-family: 'Permanent Marker', cursive;
 }
@@ -231,5 +235,3 @@ li {
         font-size: 7em;
     }
  }
-
-
